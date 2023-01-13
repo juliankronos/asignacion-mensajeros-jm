@@ -18,3 +18,5 @@ document.getElementById("Guii").innerHTML += Guias.value+"<br>";
 
 }
 
+
+

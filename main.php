@@ -1,8 +1,24 @@
 <?php
 
-$Sede = $_REQUEST["Sedes"];
-print_r($Sede);
+$servername = "localhost";
+$database = "domina";
+$username = "root";
+$password = "46682156";
+$sede = isset($_POST['Sedes']);
+    
+      
+
+$conn = mysqli_connect($servername, $username, $password, $database);
 
 
-echo "no funciona"; echo "<br/>";
+$sql = "INSERT INTO asignacion ( SEDE, CIUDAD, MENSAJERO, GUIA ) VALUES ('$sede', 'paipa', 'wilson' , '1')";
+
+if (mysqli_query($conn, $sql)) {
+    
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
 ?>
