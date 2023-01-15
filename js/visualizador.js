@@ -1,6 +1,6 @@
 function ShowSelected()
 {
- 
+    
 var combo = document.getElementById("Sed");
 var selected = combo.options[combo.selectedIndex].text;
 document.getElementById("Sedd").innerHTML += selected+"<br>";
@@ -17,6 +17,7 @@ var Guias = document.querySelector('#Gi');
 document.getElementById("Guii").innerHTML += Guias.value+"<br>";
 
 }
+
 
 
 

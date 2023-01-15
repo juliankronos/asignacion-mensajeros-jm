@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Asignacion Mensajeros</title>
     <link rel="stylesheet" href="/css/estilos.css">
+    
 </head>
 <body>
-        <form id="Ingreso" method="POST" action="main.php" >
+        <form action="/main.php" id="Ingreso">
         <p class="title">Asignacion Mensajero</p>
         <img src="/assets/img/domina.png" alt="LOGO DOMINA ENTREGA TOTAL">
         <label for="Sed">Sede</label>
@@ -40,7 +41,7 @@
         </select>     
         <label for="Gi">Guia</label>
         <input type="number" id="Gi" name="Guias" required> 
-        <input type="submit" id="Asi" value="Asignar" onclick="ShowSelected();"/>  
+        <input type="submit" id="Asi" value="Asignar" onclick="ShowSelected();Contador()"/>  
         </form>
         <form  id="Contador">
         <p id="tga">Total Guias Asignadas</p>
