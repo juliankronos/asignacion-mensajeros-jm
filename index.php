@@ -1,3 +1,10 @@
+<?php
+ 
+  // $mysqli = new mysqli('localhost', 'usuario', 'password', 'base_de_datos');
+ 
+  $mysqli = new mysqli('localhost', 'root', '46682156', 'domina');
+  
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,6 +15,7 @@
     <link rel="stylesheet" href="/css/estilos.css">
     
 </head>
+
 <body>
         <form action="./php/main.php" id="Ingreso">
         <p class="title">Asignacion Mensajero</p>
@@ -15,29 +23,32 @@
         <label for="Sed">Sede</label>
         <select name="Sedes" id="Sed" required>
           <option value="">Seleccione Sede</option>
-          <option value="Tunja">Tunja</option>
-          <option value="Duitama">Duitama</option>
+          <?php
+          $query = $mysqli -> query ("SELECT * FROM sedes");
+          while ($valores = mysqli_fetch_array($query)) {
+          echo '<option value="'.$valores['id'].'">'.$valores['sede'].'</option>';
+          }
+          ?>
         </select>  
         <label for="Ciu">Ciudad</label>
         <select name="Ciudades" id="Ciu" required>
-          <option value="">Seleccione Ciudad</option>
-          <option value="Tunja">Tunja</option>
-          <option value="Paipa">Paipa</option>
-          <option value="Duitama">Duitama</option>
-          <option value="Sogamoso">Sogamoso</option>
-          <option value="Villa De Leyva">Villa De Leyva</option>
-          <option value="Chiquinquira">Chiquinquira</option>
+          <option value="0">Seleccione Ciudad</option>
+          <?php
+          $query = $mysqli -> query ("SELECT * FROM ciudades");
+          while ($valores = mysqli_fetch_array($query)) {
+          echo '<option value="'.$valores['codigo'].'">'.$valores['ciudad'].'</option>';
+          }
+          ?>
         </select>    
         <label for="Mens">Mensajero</label>
         <select name="Mensajeros" id="Mens" required>
           <option value="">Seleccione Mensajero</option>
-          <option value="Benjamin Perdomo">Benjamin Perdomo</option>
-          <option value="Carlos Molina">Carlos Molina</option>
-          <option value="Juan Camilo Morales">Juan Camilo Morales</option>
-          <option value="Oscar Gonzalez">Oscar Gonzalez</option>
-          <option value="Wilson Pinzon">Wilson Pinzon</option>
-          <option value="Brayan Florez">Brayan Florez</option>
-          <option value="David Rodriguez">David Rodriguez</option>
+          <?php
+          $query = $mysqli -> query ("SELECT * FROM mensajeros");
+          while ($valores = mysqli_fetch_array($query)) {
+          echo '<option value="'.$valores['ced'].'">'.$valores['nombre'].'</option>';
+          }
+          ?>
         </select>     
         <label for="Gi">Guia</label>
         <input type="number" id="Gi" name="Guias" required> 
@@ -69,7 +80,8 @@
         </div>
         <br>
         </form>
-        </form>     
+        </form>  
+  <script src="assets/jquery-1.12.4-jquery.min.js"></script>         
   <script src="/js/contador.js"></script> 
   <script src="/js/visualizador.js"></script>     
   </body>
