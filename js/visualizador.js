@@ -16,7 +16,19 @@ document.getElementById("Menss").innerHTML += selected2+"<br>";
 var Guias = document.querySelector('#Gi');
 document.getElementById("Guii").innerHTML += Guias.value+"<br>";
 
+$('#Ingreso').submit(function (ev) {
+    $.ajax({
+      type: $('#Ingreso').attr('method'), 
+      url: $('#Ingreso').attr('action'),
+      data: $('#Ingreso').serialize(),
+      success: function (data) {} 
+    });
+    ev.preventDefault();
+  });
+
+
 }
+
 
 
 
