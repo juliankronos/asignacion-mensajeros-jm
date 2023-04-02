@@ -21,7 +21,7 @@ $('#Ingreso').submit(function (ev) {
       type: $('#Ingreso').attr('method'), 
       url: $('#Ingreso').attr('action'),
       data: $('#Ingreso').serialize(),
-      success: function (data) {} 
+      
     });
     ev.preventDefault();
   });
