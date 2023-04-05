@@ -21,12 +21,12 @@
         <p class="title">Asignacion Mensajero</p>
         <img src="/assets/img/domina.png" alt="LOGO DOMINA ENTREGA TOTAL">
         <label for="Man">Manifestador</label>
-        <select name="Manifestador" id="Man" required>
-          <option value="" selected="selected">Seleccione</option>
+        <select name="Usuarios" id="Man" required>
+          <option value="">Seleccione</option>
           <?php
           $query = $mysqli -> query ("SELECT * FROM usuarios");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['USid'].'">'.$valores['USnombres'].'   '.$valores['USapellidos'].'</option>';
+          echo '<option value="'.$valores['USnombres'].' '.$valores['USapellidos'].'">'.$valores['USnombres'].'   '.$valores['USapellidos'].'</option>';
           }
           ?>
         </select>  
@@ -36,7 +36,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM sedes");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['id'].'">'.$valores['sede'].'</option>';
+          echo '<option value="'.$valores['sede'].'">'.$valores['sede'].'</option>';
           }
           ?>
         </select>  
@@ -46,7 +46,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM ciudades");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['codigo'].'">'.$valores['CIciudad'].'</option>';
+          echo '<option value="'.$valores['CIciudad'].'">'.$valores['CIciudad'].'</option>';
           }
           ?>
         </select>    
@@ -56,29 +56,29 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM mensajeros");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['MENced'].'">'.$valores['MENnombre'].'</option>';
+          echo '<option value="'.$valores['MENnombre'].'">'.$valores['MENnombre'].'</option>';
           }
           ?>
         </select>  
         <label for="TV">Vehiculo</label>
-        <select name="Vehiculo" id="TV" required>
+        <select name="Vehiculos" id="TV" required>
           <option value="">Seleccione Tipo Vehiculo</option>
           <?php
           $query = $mysqli -> query ("SELECT * FROM vehiculos");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['Vid'].'">'.$valores['tipo'].'</option>';
+          echo '<option value="'.$valores['tipo'].'">'.$valores['tipo'].'</option>';
           }
           ?>
         </select> 
         <label for="Pl">Placa</label>
-        <input type="number" id="Pl" name="Placa" required>   
+        <input type="text" id="Pl" name="Placa" required>   
         <label for="Cl">Cliente</label>
-        <select name="Cliente" id="Cl" required>
+        <select name="Clientes" id="Cl" required>
           <option value="">Seleccione Cliente</option>
           <?php
           $query = $mysqli -> query ("SELECT * FROM clientes");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores['Ced'].'">'.$valores['Clinombres'].'   '.$valores['Cliapellidos'].'</option>';
+            echo '<option value="'.$valores['Clinombres'].' '.$valores['Cliapellidos'].'">'.$valores['Clinombres'].'   '.$valores['Cliapellidos'].'</option>';
           }
           ?>
         </select> 
