@@ -17,9 +17,17 @@
 </head>
 
 <body>
+
+        <header>
+            <div><input type="button" id="dwn" value="USUARIOS"  onclick="location.href='./php/ingresoUSU.php'"></div>
+            <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./php/ingresoMEN.php'"></div>
+            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href=''"></div>
+        </header> 
+
         <form action="./php/main.php" id="Ingreso">
         <p class="title">Asignacion Mensajero</p>
         <img src="/assets/img/domina.png" alt="LOGO DOMINA ENTREGA TOTAL">
+        <div>
         <label for="Man">Manifestador</label>
         <select name="Usuarios" id="Man" required>
           <option value="">Seleccione</option>
@@ -84,6 +92,7 @@
         </select> 
         <label for="Gi">Guia</label>
         <input type="number" id="Gi" name="Guias" required> 
+        </div>
         <input type="submit" id="Asi" value="Asignar" onclick="ShowSelected();"/>  
         </form>
         <form  id="Contador">
@@ -113,12 +122,13 @@
         <br>
         </form>
         </form>  
-          
+ 
   <script src="/js/contador.js"></script> 
   <script src="/js/visualizador.js"></script> 
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>    
  
   </body>
+  
 </html>
 
 
