@@ -1,4 +1,4 @@
-function Guard()
+function Guard1()
 {
     
 $('#ingusu').submit(function (ev) {
@@ -14,7 +14,7 @@ $('#ingusu').submit(function (ev) {
   alert("Guardado con exito");
 
 $(document).ready(function() {
-    $("#limpiar").click();
+    $("#limpiar1").click();
     $("#form-comun > textarea").html("");
 });
 

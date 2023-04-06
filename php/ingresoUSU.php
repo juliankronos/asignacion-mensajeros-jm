@@ -13,7 +13,7 @@
         <header>
             <div><input type="button" id="dwn" value="ASIGNACION"  onclick="location.href='./index.php'"></div>
             <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./ingresoMEN.php'"></div>
-            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./index.php'"></div>
+            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./ingresoCLI.php'"></div>
         </header> 
         <form action="./mainING.php" id="ingusu">
         
@@ -34,8 +34,8 @@
         <input type="text" id="UScar" name="Cargos" placeholder='Ingrese Cargo' required>
 
         </div>
-        <input type="submit" id="Asi" value="Guardar" onclick="Guard();" /> 
-        <button type="reset" id="limpiar" hidden=""></button>
+        <input type="submit" id="Asi" value="Guardar" onclick="Guard1();" /> 
+        <button type="reset" id="limpiar1" hidden=""></button>
         </form>
        
           

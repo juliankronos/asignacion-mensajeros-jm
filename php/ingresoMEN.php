@@ -12,10 +12,10 @@
 <body>
         <header>
             <div><input type="button" id="dwn" value="ASIGNACION"  onclick="location.href='./index.php'"></div>
-            <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./php/mainING.php'"></div>
-            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./php/mainING.php'"></div>
+            <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./ingresoMEN.php'"></div>
+            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./ingresoCLI.php'"></div>
         </header> 
-        <form action="./mainMEN.php" id="ingmen">
+        <form action="./mainMEN.php" id="ingusu">
         
         <p class="title">Registros Mensajeros</p>
         <img src="/assets/img/domina.png" alt="LOGO DOMINA ENTREGA TOTAL">
@@ -28,12 +28,12 @@
         <input type="text" id="Mna" name="NombresM" placeholder='Ingrese Nombres' required> 
              
         </div>
-        <input type="submit" id="Asi" value="Guardar" /> 
-        <button type="reset" id="limpiar2" hidden=""></button>
+        <input type="submit" id="Asi" value="Guardar" onclick="Guard1();" /> 
+        <button type="reset" id="limpiar1" hidden=""></button>
         </form>
        
           
-  <script src="/js/men.js"></script> 
+  <script src="/js/usu.js"></script>  
   <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>    
  
   </body>

@@ -19,9 +19,9 @@
 <body>
 
         <header>
-            <div><input type="button" id="dwn" value="USUARIOS"  onclick="location.href='./php/ingresoUSU.php'"></div>
-            <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./php/ingresoMEN.php'"></div>
-            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href=''"></div>
+            <div><input type="button" id="dwn" value="USUARIOS"  onclick="location.href='./ingresoUSU.php'"></div>
+            <div><input type="button" id="dwn" value="MENSAJEROS"  onclick="location.href='./ingresoMEN.php'"></div>
+            <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./ingresoCLI.php'"></div>
         </header> 
 
         <form action="./php/main.php" id="Ingreso">
