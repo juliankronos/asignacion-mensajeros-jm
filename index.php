@@ -26,7 +26,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM usuarios");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['USnombres'].' '.$valores['USapellidos'].'">'.$valores['USnombres'].'   '.$valores['USapellidos'].'</option>';
+          echo '<option value="'.$valores['USid'].' ">'.$valores['USnombres'].'   '.$valores['USapellidos'].'</option>';
           }
           ?>
         </select>  
@@ -36,7 +36,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM sedes");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['sede'].'">'.$valores['sede'].'</option>';
+          echo '<option value="'.$valores['SEid'].'">'.$valores['sede'].'</option>';
           }
           ?>
         </select>  
@@ -46,7 +46,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM ciudades");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['CIciudad'].'">'.$valores['CIciudad'].'</option>';
+          echo '<option value="'.$valores['codigo'].'">'.$valores['CIciudad'].'</option>';
           }
           ?>
         </select>    
@@ -56,7 +56,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM mensajeros");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['MENnombre'].'">'.$valores['MENnombre'].'</option>';
+          echo '<option value="'.$valores['MENced'].'">'.$valores['MENnombre'].'</option>';
           }
           ?>
         </select>  
@@ -66,7 +66,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM vehiculos");
           while ($valores = mysqli_fetch_array($query)) {
-          echo '<option value="'.$valores['tipo'].'">'.$valores['tipo'].'</option>';
+          echo '<option value="'.$valores['Vid'].'">'.$valores['tipo'].'</option>';
           }
           ?>
         </select> 
@@ -78,7 +78,7 @@
           <?php
           $query = $mysqli -> query ("SELECT * FROM clientes");
           while ($valores = mysqli_fetch_array($query)) {
-            echo '<option value="'.$valores['Clinombres'].' '.$valores['Cliapellidos'].'">'.$valores['Clinombres'].'   '.$valores['Cliapellidos'].'</option>';
+            echo '<option value="'.$valores['Ced'].' ">'.$valores['Clinombres'].'   '.$valores['Cliapellidos'].'</option>';
           }
           ?>
         </select> 
