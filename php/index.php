@@ -24,7 +24,7 @@
             <div><input type="button" id="dwn" value="CLIENTES"  onclick="location.href='./ingresoCLI.php'"></div>
         </header> 
 
-        <form action="./php/main.php" id="Ingreso">
+        <form action="/php/main.php" id="Ingreso">
         <p class="title">Asignacion Mensajero</p>
         <img src="/assets/img/domina.png" alt="LOGO DOMINA ENTREGA TOTAL">
         <div>
@@ -93,7 +93,7 @@
         <label for="Gi">Guia</label>
         <input type="number" id="Gi" name="Guias" required> 
         </div>
-        <input type="submit" id="Asi" value="Asignar" onclick="ShowSelected();"/>  
+        <input type="submit" id="Asi" value="Asignar" onclick="Show();"/>  
         </form>
         <form  id="Contador">
         <p id="tga">Total Guias Asignadas</p>

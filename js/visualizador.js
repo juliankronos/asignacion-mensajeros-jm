@@ -1,4 +1,4 @@
-function ShowSelected()
+function Show()
 {
     
 var combo = document.getElementById("Sed");
